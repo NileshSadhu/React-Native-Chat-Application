@@ -15,4 +15,11 @@ app.use(
   }),
 );
 
+app.use("/health", (req, res) => {
+  res.send("Server health check.");
+});
+
+import authRouter from "./routes/auth.route";
+app.use("/api/v1/auth", authRouter);
+
 export default app;

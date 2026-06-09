@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import { User } from "../models/user.model.js";
+import { User } from "../models/user.model";
 import bcrypt from "bcryptjs";
-import { generateToken } from "../utils/generateToken.js";
+import { generateToken } from "../utils/generateToken";
 
 export const login = async (req: Request, res: Response) => {
   try {

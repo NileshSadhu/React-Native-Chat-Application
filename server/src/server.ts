@@ -1,9 +1,13 @@
+import dns from "node:dns";
+
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 import dotenv from "dotenv";
 import connectDB from "./config/db";
 import app from "./app";
 import { createServer } from "http";
 import { initSocket } from "./socket/socket";
-import { socketAuth } from "./middleware/socket.middleware";
+import { socketAuth } from "./middleware/message.middleware";
 import { Message } from "./models/message.model";
 
 dotenv.config();
