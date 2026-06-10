@@ -27,7 +27,7 @@ export const login = async (req: Request, res: Response) => {
 
     return res.status(200).json({
       token,
-      user,
+      meaasge: "Login successful",
     });
   } catch (error) {
     console.log("Failed login operation : ", error);
@@ -60,7 +60,7 @@ export const register = async (req: Request, res: Response) => {
 
     return res.status(201).json({
       token,
-      user,
+      message: "User registered successfully",
     });
   } catch (error) {
     console.log("Failed login operation : ", error);
